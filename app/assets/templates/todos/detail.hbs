@@ -1,0 +1,21 @@
+<a href="/"> Return to task list </a>
+
+<h4> 
+<span class="editable" data-edit-form="editTodoTitle">{{title}}</span>
+<form id="editTodoTitle" action="/todos/{{id}}" class="hidden" method="put">
+<input type='text' name="title" value="{{title}}">
+</form>
+</h4>
+Completed:  <input type="checkbox" 
+{{#if completed}} checked {{/if}} 
+name="completed">
+
+<div id="todo-description" class="editable" data-edit-form="editTodoDescription">
+  Description: {{description}}
+</div>
+<form id="editTodoDescription" action="/todos/{{id}}" class="hidden" method="put">
+  <textarea name="description">
+    {{description}}
+  </textarea>
+  <input type="submit">
+</form>

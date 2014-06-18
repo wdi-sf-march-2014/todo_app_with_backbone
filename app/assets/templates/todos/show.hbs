@@ -1,0 +1,8 @@
+<label>
+<input type="checkbox" 
+       {{#if completed}} checked {{/if}} 
+       name="completed"> 
+{{title}}
+</label>
+<a href="/todos/{{id}}"> View details</a>
+<button class="removeTodo">delete</button>
